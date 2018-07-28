@@ -1,0 +1,41 @@
+pwd: print working directory
+
+cd: change directory(use tab while typing commands)
+
+ls: list all files
+ls -l(long flag): list all files with details
+	-rw-rw-r-- (tells that it is a file)
+ls -la(show hidden files): list all files even hidden 1
+	. (current directory)
+	..(parent directory)
+	.git(every folder is initialized with a git)
+
+cat [fileName]: show content of file
+cat -n [fileName]: show content of file with line number
+less [fileName]: show content of file with a better UI(like nano editor)
+	shift+g => bottom of file
+	g => top of file
+	/[any_word] => search the file for word
+	q => takes back to bash screen
+
+open . (MacOS) && xdg-open .(Ubuntu)=>  opens the current directory folder(MacOS) (. stands for current folder)
+open .git(MacOS) && xdg-open .git(Ubuntu) => opens the git directory in current folder
+open button.js (MacOS) && xdg-open button.js (Ubuntu)=> opens the .js file in default application, (In Ubuntu, mostly opens in textEditor)
+
+CREATE A NEW FILE:
+touch [create a new file with any extension]: creates a new file with any extension provided
+EDIT A FILE:
+echo "any text in the world" > [fileName created with touch or any]: logs the echo inside the name provided file(basically, echo logs everything in quotes)
+	echoing into a file just re-writes into the file.
+APPEND A FILE:
+echo "any text in the world" >> [fileName created with touch or any]: appends the file with previous content.
+	echo also creates the file if not present
+CREATING A FILE WITH ECHO:
+echo "any text in the world" > [fileName you want to create]: logs the text in the file created with echo by name provided
+
+mkdir [folder_Name]: creates a folder with provided name
+mkdir -p [folder_name with directories( eg: a/b/c)]: creates a folder c within b within a(nested folder)
+ls a/b: lists the files and folder inside folder b if present.
+rm [file_name present in current directory]: deletes the file permanently from the folder
+rm -r [folder_name]: removes the folder from the current directory
+rm -rf [folder_name]: removes the folder from the current directory
