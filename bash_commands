@@ -57,9 +57,29 @@ find [folder_name(within current directory)]/ -name ["file_name" or  any extensi
 find [folder_name]/ -name "*[file_name] or any extension" -exec pngquant {} \;: compresses the files with given name or extensions or optimizes.
 man find: manual help for find.
 
+SEARCH FOR TEXT WITH "GREP":
+grep "any_text_in_the_world" [folder_name(present in current directory)]/[file_name(present in given directory)]: finds all usage of given text in given file under given folder.
+grep "any_text_in_the_world" [folder_name(present in current directory)]/**/*[file_name or any extension(present in given directory)]: finds all usage of given text in given directory in each file.
+grep --color -n "any_text_in_the_world" [folder_name(present in current directory)]/[file_name(present in given directory)]: same as 1st command in same section just adds color to searched text and also shows line number.
+grep --color -n -C 3 "module.exports" nodejs/**/*.js: -C flag shows content about 3 lines up and below of match.
+grep --color -n -e "[firstlast]name" nodejs/**/*.js: -e is a regex flag which searches for firstname and lastname in all .js files in given directory.
+man grep
 
-
-
+MAKE HTTP REQUEST IN BASH WITH "CURL":                                                      
+curl https://example.com => get request to a website
+curl https://swapi.co/api/people/1/ => a call to star wars api, returns json object.
+curl -i https://swapi.co/api/people/2 => i stands for including header and returns header for api request.(check the location, this is where curl wants us to redirect)
+curl -iL https://swapi.co/api/people/2 => L redirects us to desired location.
+curl -H "Authorization: Bearer 123" localhost:8081/[api_location]: makes a get request to given api and localhost port might vary.(8081 is default for react-native)      //    EGGHEAD.IO    Video-8, 2:00
+curl -X POST -H "Content-Type: application/json" -d '{"title": "curling", "author": "Manoj"}' http://localhost:8081/ => a post request to given api at given location.          //     EGGHEAD.IO    Video-8, 2:00
+curl -i -X POST --data-urlencode title="Curling again" --data-urlencode author="Manoj Yadav" localhost:8081/ => changing the previously posted json object.
+curl -i -X PUT \
+> -d '{ "title": "title_Changed"}' \
+> -H "Content-Type: application/json" \
+> http://localhost:8081/
+	=> creates a put request on the given port and server changing the title and header.
+curl -iL https://google.com -o google.txt => creates a google.txt in present directory and logs in the response given by api_request.
+curl https://swapi.co/api/people/1/ | jsome => logs json obect in a better UI with help of jsome utility.
 
 
 
