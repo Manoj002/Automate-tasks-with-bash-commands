@@ -104,7 +104,30 @@ chmod u+x script.sh => change mode of user to execute file.
 8. run the .sh file in any folder.
 
 STORE AND USE VALUES WITH BASH VARIABLES:
-
+var=123    (no spaces)
+echo $var (var is for this bash session only)
+	1. create a script file(.sh) => nano new_file.sh
+	2. modify the script => echo $var
+	3. run the script => ./new_file.sh
+	4. output is blank
+	5. to make the var visible to all processes => export var
+	6. run again the script => ./new_file.sh
+	7. output => 123
+	8. to make var again invisible to all processses => unset var
+	9. output is again blank.
+env => global and local variables.
+echo $[any_variable_provided_by_env] => gives value
+					CLONING A BRANCH OF A LOCAL GIT REPO TO TEMP FOLDER
+	1. nano clone_to_temp.sh => opens nano editor with given file_name.
+	2. in nano editor:
+		a. temp=$(mktemp -d) => mktemp will create a temporary file or folder and location of that will be saved in temp.
+		b. git clone --branch $1 $PWD $temp => cloning a branch of local git repository in current working directory(pwd). in temp folder.
+		c. echo "branch $1 clone to $temp"
+		d. #run some tasks, tests, etc.
+	3. chmod u+x clone_to_temp.sh => change user permission
+	4. git add . && git commit -am "initial"
+	5. git branch new
+	6. ./clone_to_temp.sh new
 
 
 
