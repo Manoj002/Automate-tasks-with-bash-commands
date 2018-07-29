@@ -81,8 +81,29 @@ curl -i -X PUT \
 curl -iL https://google.com -o google.txt => creates a google.txt in present directory and logs in the response given by api_request.
 curl https://swapi.co/api/people/1/ | jsome => logs json obect in a better UI with help of jsome utility.
 
+CREATE AND RUN BASH SCRIPTS WITH COMMAND LINE ARGUMENTS:
+touch script.sh => create a bash script(.sh)
+nano script.sh => opening the file with nano editor
+modify the script in nano editor and run (./script.sh) gives permission denied error.
+ls -l gives a detail of file -rw-r--r-- 1(i.e. read, write, execute permission is not given)
+chmod u+x script.sh => change mode of user to execute file.
+						CREATING A NEW PROECT-TYPE INIT:
+1. create a new folder
+2. create a new script file in folder(.sh file)
+3. open that file in nano
+4. start typing: 
+	a. echo "Initializing JS project at $(pwd)"
+	b. git init
+	c. npm init -y                                    #create a package.json with all the defaults
+	d. mkdir src                                      # create a src folder in given folder
+	e. touch src/index.js                   # create a src folder in given folder
+	f. code.                                                # open src/index.js
+5. echo $PATH => lists all executables location in your system
+6. which node => location where node is located
+7. copy the .sh file to usr/local/bin/init-js
+8. run the .sh file in any folder.
 
-
+STORE AND USE VALUES WITH BASH VARIABLES:
 
 
 
