@@ -39,3 +39,46 @@ ls a/b: lists the files and folder inside folder b if present.
 rm [file_name present in current directory]: deletes the file permanently from the folder
 rm -r [folder_name]: removes the folder from the current directory
 rm -rf [folder_name]: removes the folder from the current directory
+
+mv [file_name] directory/[file_name]: moves the file inside given directory.
+mv [file_name1] [file_name2]: renames the file in same directory.
+mv [folder_name1]/ [folder_name2]: changes the folder name in same directory.
+mv [folder_name1]/* [folder_name2]: moves(cut and paste) the content of folder_name1 to folder_name2
+cp [file_name] [folder_name]/[file_name]: copy file to given folder.
+cp -R [folder_name1]/ * [folder_name2]/: copy all content of a folder_name1 to folder_name2.
+
+FIND FILES AND FOLDER WITH "FIND" IN BASH:
+find [folder_name (in current directory)]/ -name "*.[file_extension or any file_name]": finds the file in given folder with searched string.
+find [folder_name (in current directory)]/ -iname "*.[file_extension or any file_name]": finds the file in given folder with searched string(Case-sensitive_search).
+find . -type d: find all folders in my current working directory
+find . -type d -name ["folder_name"]: finds all folders with given name in current directory
+find . -type d -inmae ["folder_name"]: finds all folders with given name in current directory(Case-sensitive_search).
+find [folder_name(within current directory)]/ -name ["file_name" or  any extension in quotes] -delete: deletes all the files in given folder with given name or extension
+find [folder_name]/ -name "*[file_name] or any extension" -exec pngquant {} \;: compresses the files with given name or extensions or optimizes.
+man find: manual help for find.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
