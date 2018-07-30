@@ -15,7 +15,7 @@ global=123   #global_variable
 
 test() {
     echo "global = $global"
-    local local_var="im a local variable"
+    local local_var="im a local variable"  #local_variable
     echo "local_var = $local_var"
 }
 
